@@ -3,20 +3,38 @@
     src: url(fontawesome-free-5.15.3-desktop/fontawesome-free-5.15.3-desktop/otfs/Font\ Awesome\ 5\ Brands-Regular-400.otf);
 }
 
+#background-image {
+    overflow: hidden hidden -moz-hidden-unscrollable;
+}
+
+svg {
+    z-index: -1;
+    top: -15%;
+    left: -50%;
+    width: 150%;
+    position: absolute;
+}
+
 body {
-    font-size: 1.3em;
+    overflow-x: hidden;
+    font-size: 1.3rem;
     font-family: font-awesome;
-    color: rgba(255, 255, 255, 0.87);
+    color: rgba(24, 24, 24, 0.87);
+    background-color: #B6758D;
+}
+
+a img {
+    width: 35px;
 }
 
 .fill {
     background-color: #383736;
     position: relative;
     display: block;
-    height: 45px;
-    width: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
     margin: 10px 7px;
-    padding: .7em;
+    padding: 5px;
     font-size: 15px;
     letter-spacing: 1px;
     color: #c7c7c7;
@@ -33,6 +51,81 @@ body {
     -ms-transition: 0.2s ease-in;
     -moz-transition: 0.2s ease-in;
     -webkit-transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .background-image {
+        width: fit-content;
+        overflow-x: hidden;
+    }
+    svg {
+        z-index: -1;
+        top: -2%;
+        left: -230%;
+        width: 520%;
+        overflow-x: hidden;
+    }
+    .fill {
+        font-size: .95rem;
+    }
+    .navbar {
+        float: none;
+    }
+    .navbar {
+        float: none;
+    }
+    .fill {
+        min-width: fit-content;
+        min-height: fit-content;
+        padding: 5px;
+        font-size: .80rem;
+    }
+    footer p {
+        margin-left: 2rem;
+    }
+    footer a {
+        align-items: center;
+    }
+    .brandicons {
+        margin: auto;
+        height: 100%;
+        width: 5vh;
+    }
+    .dropdown-menu {
+        background: rgba(255, 255, 255, 0.096);
+        margin-left: -.5rem;
+    }
+    .dropdown-item {
+        margin: auto;
+        text-align: center;
+        width: 8rem;
+    }
+}
+
+.navbar {
+    text-align: center;
+    float: right;
+}
+
+.dropdown-item {
+    margin: auto;
+    text-align: center;
+    width: 7rem;
+}
+
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.096);
+    padding: .75rem;
+}
+
+.brandicons {
+    margin: auto;
+    height: 100%;
+    width: 5vh;
 }
 
 .active {
@@ -67,7 +160,17 @@ footer .container+.container {
 }
 
 footer a {
-    width: 5em;
+    width: 4rem;
+    height: 3rem;
+    justify-content: center;
+}
+
+footer p {
+    background-color: rgba(255, 255, 255, 0.137);
+    margin: auto;
+    margin-bottom: 15px;
+    width: 24ch;
+    border-radius: 15px;
 }
 
 img:hover::before {
